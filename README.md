@@ -9,4 +9,4 @@ build.shを実行してください。sudoグループに所属しているユ�
 [Pi-App-Manager]-[ビルド番号]というようにしていきます。Pi-App-Managerのバージョンが変わるとビルド番号もリセットします。
 
 # softwaresについて
-EG-Installerにある`softwares`は[こちら](https://github.com/NSK-1010/pi-app-manager-scripts-buster)で開発を行っています。
+Pi-App-Managerにある`softwares`は[こちら](https://github.com/NSK-1010/pi-app-manager-scripts-buster)で開発を行っています。
