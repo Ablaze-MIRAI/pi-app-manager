@@ -3,7 +3,11 @@
 dpkgでビルドできるようになっています。
 
 # ビルド方法について
-build.shを実行してください。sudoグループに所属しているユーザーで実行してください。
+```
+git clone https://github.com/NSK-1010/pi-app-manager.git
+cd pi-app-manager
+sudo bash ./build.sh
+```
 
 # バージョンについて
 [Pi-App-Manager]-[ビルド番号]というようにしていきます。Pi-App-Managerのバージョンが変わるとビルド番号もリセットします。
