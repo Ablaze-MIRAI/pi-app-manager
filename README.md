@@ -1,5 +1,5 @@
 # 概要
-[EG-Installer](https://github.com/Hayao0819/EG-Installer)をSereneLinux（Ubuntu用）に最適化したものを、armhf Debian用に最適化したものです。です。  
+[EG-Installer](https://github.com/Hayao0819/EG-Installer)をSereneLinux（Ubuntu用）に最適化したものを、armhf版Debian用に最適化したものです。  
 dpkgでビルドできるようになっています。
 
 # ビルド方法について
