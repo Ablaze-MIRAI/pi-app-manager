@@ -207,8 +207,8 @@ function show_version () {
         --info \
         --width="600" \
         --height="100" \
-        --text="＝＝　EG-Intaler　＝＝\nVersion:　${version}\nYamada　Hayao　shun819.mail@gmail.com"
-    debug_msg "EG-installer v${version}"
+        --text="＝＝　Pi-App-Manager　＝＝\nVersion:　${version}\nPianoCat kotone.olin1010@gmail.com"
+    debug_msg "Pi-App-Manager v${version}"
     exit 0
 }
 
