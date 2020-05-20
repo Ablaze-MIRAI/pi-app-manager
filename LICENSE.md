@@ -1,8 +1,7 @@
 
 The MIT License (MIT)
 
-Copyright (c) 2019 hayao    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2020 PianoCat
+Copyright (c) 2019 hayao
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
