@@ -35,7 +35,7 @@
 #-- 設定 --#
 settings=/etc/pi-app-manager/config
 entry_extension="entry"
-version=1.00
+version=1.00-1
 
 
 
