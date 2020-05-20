@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 
 #=================================================================#
-# Serene-Startdash config
+# Pi-App-Manager config
 #=================================================================#
 
 
 
 #=================================================================#
 # 一部の値はデバッグ用引数で上書きできます。
-# 詳しくは-hオプションをつけてserene-startdashを実行してください。
+# 詳しくは-hオプションをつけてpi-app-managerを実行してください。
 #=================================================================#
 
 
 
 #-- ウィンドウのタイトル --#
-window_text="Serene-Startdash v${version}"
+window_text="Pi App Manager v${version}"
 
 
 
@@ -25,7 +25,7 @@ window_text="Serene-Startdash v${version}"
 # このアイコンはウィンドウマネージャのアイコン表示に使用されます。
 #=================================================================#
 #
-window_icon="/usr/share/pixmaps/serene/icon_flat_noshadow.png"
+window_icon="/usr/share/pixmaps/ablaze/appmanager.png"
 
 
 
@@ -43,7 +43,7 @@ pacman="/usr/local/bin/pacapt"
 # スクリプトと同じディレクトリを指定する場合は${current_dir}が使用できます。
 #=================================================================#
 #
-script_dir="/etc/serene-startdash/softwares"
+script_dir="/etc/pi-app-manager/softwares"
 
 
 
@@ -54,11 +54,9 @@ script_dir="/etc/serene-startdash/softwares"
 # スクリプトはすべてディストリビューターが用意する必要があります。
 # デフォルトではこの項目は空です。この変数を設定するのは全て自己責任でお願いします。
 # この変数で設定したスクリプトは「ソフトウェアの追加と削除」を選択した際に、softwaresの一覧を読み込む前に実行されます。
-# 例えば、SereneLinuxでは最新のsoftwaresを公式サイトの「serenelinux.com/redirect/softwares/bionic」に置き、
-# この変数で一覧を読み込む前に自動でダウンロード、展開を行うようにしています。
 #=================================================================#
 #
-softwares_update=/usr/bin/serene-startdash-update-scripts
+softwares_update=/usr/bin/pi-app-manager-update-scripts
 
 
 
