@@ -39,7 +39,7 @@ git clone ${url} ${download_path}/
 rm -f $extract_dir/*
 
 # 移動
-mv ${download_path})/* $extract_dir
+mv ${download_path}/* $extract_dir
 rm $extract_dir/README.md
 
 # ダウンロードした一時ファイルを削除
