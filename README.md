@@ -7,6 +7,7 @@
 ```sh
 git clone https://github.com/nsk-1010/pi-app-manager.git -b 1.10-2
 chmod 755 -R pi-app-manager
+cd pi-app-manager
 ```
 
 続いて依存関係を解決しましょう。
@@ -19,7 +20,6 @@ chmod 755 -R pi-app-manager
 
 完了したらターミナル上でこちらのコマンドを実行してください。
 ```sh
-cd pi-app-manager
 ./pi-app-manager
 ```
 
