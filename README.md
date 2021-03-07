@@ -1,11 +1,11 @@
 # 概要
-[EG-Installer](https://github.com/Hayao0819/EG-Installer)をSereneLinux（Ubuntu用）に最適化したものを、armhf版Debian用に最適化したものです。  
+[EG-Installer](https://github.com/Hayao0819/EG-Installer)をSereneLinux（Ubuntu用）に最適化したものを、armhf版Debian用に最適化したものです。
 インストールせずに使えます。
 
 # 使い方
 まずは依存関係を解決しましょう。
 
-ターミナル上でこのコマンドを実行してください。Ruotでなければsudoで実行してください。
+ターミナル上でこのコマンドを実行してください。Rootでなければsudoで実行してください。
 
 ```sh
 ./depends.bash
