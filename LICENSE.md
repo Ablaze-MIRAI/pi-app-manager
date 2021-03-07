@@ -1,7 +1,6 @@
-
 The MIT License (MIT)
 
-Copyright (c) 2019 hayao,2020 PianoCat
+Copyright (c) 2019 hayao, 2020 PianoCat, 2021 Ablaze
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

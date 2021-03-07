@@ -13,6 +13,8 @@
 
 
 
+current_dir=$(cd $(dirname $0) && pwd)
+
 #-- ウィンドウのタイトル --#
 window_text="Pi App Manager v${version}"
 
@@ -25,7 +27,7 @@ window_text="Pi App Manager v${version}"
 # このアイコンはウィンドウマネージャのアイコン表示に使用されます。
 #=================================================================#
 #
-window_icon="/usr/share/pixmaps/piappmanager/appmanager.svg"
+window_icon="${current_dir}/pixmaps/appmanager.svg"
 
 
 
@@ -43,7 +45,8 @@ pacman="/usr/local/bin/pacapt"
 # スクリプトと同じディレクトリを指定する場合は${current_dir}が使用できます。
 #=================================================================#
 #
-script_dir="/etc/pi-app-manager/softwares"
+
+script_dir="${current_dir}/softwares"
 
 
 
@@ -56,7 +59,7 @@ script_dir="/etc/pi-app-manager/softwares"
 # この変数で設定したスクリプトは「ソフトウェアの追加と削除」を選択した際に、softwaresの一覧を読み込む前に実行されます。
 #=================================================================#
 #
-softwares_update="/usr/bin/pi-app-manager-update-scripts"
+softwares_update="${current_dir}/pi-app-manager-update-scripts"
 
 
 

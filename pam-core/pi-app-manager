@@ -9,7 +9,15 @@
 # Email : shun819.mail@gmail.com
 
 # Pi-App-Manager based Serene-Startdash
-# PianoCat 2020.
+# Piano Nekomiya 2020.
+# Twitter: @nsk_id1010
+# Email : kotone.olin1010@gmail.com
+
+# Pi-App-Manager based Serene-Startdash
+# Ablaze 2021.
+# Twitter: @Ablaze_MIRAI
+#
+# Piano Nekomiya(Project leader)
 # Twitter: @nsk_id1010
 # Email : kotone.olin1010@gmail.com
 
@@ -32,10 +40,17 @@
 
 
 
+#-- 変数定義 --#
+current_path=$(cd $(dirname $0) && pwd)/$(basename $0)
+current_dir=$(dirname $current_path)
+unset run
+
+
+
 #-- 設定 --#
-settings=/etc/pi-app-manager/config
+settings=${current_dir}/config
 entry_extension="entry"
-version=1.00-1
+version=1.10-1
 
 
 
@@ -43,12 +58,6 @@ version=1.00-1
 #-- エラーチェック --#
 set -eu
 
-
-
-#-- 変数定義 --#
-current_path=$(cd $(dirname $0) && pwd)/$(basename $0)
-current_dir=$(dirname $current_path)
-unset run
 
 
 
@@ -207,7 +216,7 @@ function show_version () {
         --info \
         --width="600" \
         --height="100" \
-        --text="＝＝　Pi-App-Manager　＝＝\nVersion:　${version}\nPianoCat kotone.olin1010@gmail.com"
+        --text="＝＝　Pi-App-Manager　＝＝\nVersion:　${version}\nAblaze"
     debug_msg "Pi-App-Manager v${version}"
     exit 0
 }
@@ -263,7 +272,7 @@ function install_and_uninstall () {
     set + eu
     if [[ -n $softwares_update && -f $softwares_update && -x $softwares_update ]]; then
         $softwares_update | loading 600 100 "スクリプトを更新しています。"
-        if [[ -z $(ls /etc/pi-app-manager/softwares 2> /dev/null) ]]; then
+        if [[ -z $(ls ${current_dir}/softwares 2> /dev/null) ]]; then
             error 500 100 "スクリプトのアップデートに失敗しました。"
             exit 1
         fi
