@@ -3,13 +3,23 @@
 インストールせずに使えます。
 
 # 使い方
-こちらのコマンドを入力してください。
+まずは依存関係を解決しましょう。
+
+ターミナル上でこのコマンドを実行してください。Ruotでなければsudoで実行してください。
+
 ```sh
-git clone https://github.com/nsk-1010/pi-app-manager.git -b 1.10-1
+./depends.bash
+```
+
+完了したらターミナル上でこちらのコマンドを実行してください。
+```sh
+git clone https://github.com/nsk-1010/pi-app-manager.git -b 1.10-2
 chmod 755 -R pi-app-manager
 cd pi-app-manager
 ./pi-app-manager
 ```
+
+これで実行ができます。
 
 # バージョンについて
 [Pi-App-Manager]-[ビルド番号]というようにしていきます。Pi-App-Managerのバージョンが変わるとビルド番号もリセットします。

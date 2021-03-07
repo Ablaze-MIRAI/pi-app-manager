@@ -50,7 +50,7 @@ unset run
 #-- 設定 --#
 settings=${current_dir}/config
 entry_extension="entry"
-version=1.10-1
+version=1.10-2
 
 
 
