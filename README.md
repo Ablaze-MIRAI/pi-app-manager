@@ -3,23 +3,16 @@
 インストールせずに使えます。
 
 # 使い方
-まずは依存関係を解決しましょう。
-
-ターミナル上でこのコマンドを実行してください。Rootでなければsudoで実行してください。
-
+## 通常版
+こちらのコマンドを実行してください。Root以外のユーザーを使っている人は`|`のあとの`bash`を`sudo bash`に変更してください。
 ```sh
-./depends.bash
+curl -s https://github.com/NSK-1010/pi-app-manager/releases/download/1.10-2/pi-app-manager.bash | bash
 ```
-
-完了したらターミナル上でこちらのコマンドを実行してください。
+## ポータブル版
+こちらのコマンドを実行してください。Root以外のユーザーを使っている人は`|`のあとの`bash`を`sudo bash`に変更してください。
 ```sh
-git clone https://github.com/nsk-1010/pi-app-manager.git -b 1.10-2
-chmod 755 -R pi-app-manager
-cd pi-app-manager
-./pi-app-manager
+curl -s https://github.com/NSK-1010/pi-app-manager/releases/download/1.10-2/pi-app-manager-portable.bash | bash
 ```
-
-これで実行ができます。
 
 # バージョンについて
 [Pi-App-Manager]-[ビルド番号]というようにしていきます。Pi-App-Managerのバージョンが変わるとビルド番号もリセットします。
