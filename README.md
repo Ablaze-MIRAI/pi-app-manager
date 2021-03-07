@@ -3,7 +3,13 @@
 インストールせずに使えます。
 
 # 使い方
-まずは依存関係を解決しましょう。
+まずクローンします。
+```sh
+git clone https://github.com/nsk-1010/pi-app-manager.git -b 1.10-2
+chmod 755 -R pi-app-manager
+```
+
+続いて依存関係を解決しましょう。
 
 ターミナル上でこのコマンドを実行してください。Rootでなければsudoで実行してください。
 
@@ -13,8 +19,6 @@
 
 完了したらターミナル上でこちらのコマンドを実行してください。
 ```sh
-git clone https://github.com/nsk-1010/pi-app-manager.git -b 1.10-2
-chmod 755 -R pi-app-manager
 cd pi-app-manager
 ./pi-app-manager
 ```
