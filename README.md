@@ -4,10 +4,12 @@
 
 # 使い方
 こちらのコマンドを入力してください。
-    $ git clone https://github.com/nsk-1010/pi-app-manager.git -b 1.10-1
-    $ chmod 755 -R pi-app-manager
-    $ cd pi-app-manager
-    $ ./pi-app-manager
+```sh
+git clone https://github.com/nsk-1010/pi-app-manager.git -b 1.10-1
+chmod 755 -R pi-app-manager
+cd pi-app-manager
+./pi-app-manager
+```
 
 # バージョンについて
 [Pi-App-Manager]-[ビルド番号]というようにしていきます。Pi-App-Managerのバージョンが変わるとビルド番号もリセットします。
