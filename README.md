@@ -5,7 +5,7 @@
 # 使い方
 こちらのコマンドを入力してください。
 ```sh
-git clone https://github.com/nsk-1010/pi-app-manager.git -b 1.10-1
+git clone https://github.com/nsk-1010/pi-app-manager.git -b 1.10-2
 chmod 755 -R pi-app-manager
 cd pi-app-manager
 ./pi-app-manager
