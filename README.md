@@ -6,12 +6,12 @@
 ## 通常版
 こちらのコマンドを実行してください。Root以外のユーザーを使っている人は`|`のあとの`bash`を`sudo bash`に変更してください。
 ```sh
-curl -s https://github.com/NSK-1010/pi-app-manager/releases/download/1.10-2/pi-app-manager.bash | bash
+curl -s https://raw.githubusercontent.com/NSK-1010/pi-app-manager/master/run/pi-app-manager.bash | bash
 ```
 ## ポータブル版
 こちらのコマンドを実行してください。Root以外のユーザーを使っている人は`|`のあとの`bash`を`sudo bash`に変更してください。
 ```sh
-curl -s https://github.com/NSK-1010/pi-app-manager/releases/download/1.10-2/pi-app-manager-portable.bash | bash
+curl -s https://raw.githubusercontent.com/NSK-1010/pi-app-manager/master/run/pi-app-manager-portable.bash | bash
 ```
 
 # バージョンについて
