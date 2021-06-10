@@ -1,18 +1,5 @@
-#!/usr/bin/env bash
+!/usr/bin/env bash
 set -e
-
-
-## Settings
-working_directly="./pacapt"
-control_url="https://raw.githubusercontent.com/Hayao0819/pacapt-installer/master/control"
-postinst_url="https://raw.githubusercontent.com/Hayao0819/pacapt-installer/master/postinst"
-postrm_url="https://raw.githubusercontent.com/Hayao0819/pacapt-installer/master/postrm"
-pacapt_url="https://github.com/Hayao0819/pacapt/raw/ng/pacapt"
-pacapt_path="usr/local/bin/pacapt"
-deb_name=./pacapt.deb
-
-
-## pacapt installer for Ubuntu
 
 ## Initial function
 function red_log () {
@@ -30,52 +17,24 @@ function yellow_log () {
     return 0
 }
 
-function search_pkg () {
-    set +e
-    package_exist=$(dpkg --get-selections  | grep -w $1 | awk '{print $1}')
-    if [[ -n "$package_exist" ]]; then
-        printf 0
-        return 0
-    else
-        printf 1
-        return 1
-    fi
-    set -e
-}
+## Settings
+working_directly="./pacapt"
+control_url="https://raw.githubusercontent.com/Hayao0819/pacapt-installer/master/control"
+postinst_url="https://raw.githubusercontent.com/Hayao0819/pacapt-installer/master/postinst"
+postrm_url="https://raw.githubusercontent.com/Hayao0819/pacapt-installer/master/postrm"
+pacapt_url="https://github.com/Hayao0819/pacapt/raw/ng/pacapt"
+pacapt_path="usr/local/bin/pacapt"
+deb_name=./pacapt.deb
 
 ## Check root.
 if [[ ! $UID = 0 ]]; then
     red_log "You need root permission."
     exit 1
 fi
-
 ## Initialize
-mode=0
-update_mode=
 initial_directory=$(pwd)
-if [[ ! $# = 0 ]]; then
-    argument="$@"
-else
-    argument=
-fi
 
-## functions 
-function make_link () {
-    sudo ln -s /$pacapt_path /usr/local/bin/pacapt-tlmgr
-    sudo ln -s /$pacapt_path /usr/local/bin/pacapt-conda
-    sudo ln -s /$pacapt_path /usr/local/bin/p-tlmgr
-    sudo ln -s /$pacapt_path /usr/local/bin/p-conda
-    sudo ln -sv /$pacapt_path /usr/local/bin/pacman || true
-    return 0
-}
-
-function pacapt_to_yay () {
-    echo "alias yay='sudo pacapt'" >> /etc/bash.bashrc
-    echo "alias yay='sudo pacapt'" >> /etc/skel/.bashrc
-    source /etc/bash.bashrc
-    return 0
-}
-
+## Build/Install
 function build_deb () {
     blue_log "Start creating a Debian package file."
     if [[ ! -d $working_directly ]]; then 
@@ -103,20 +62,18 @@ function build_deb () {
     return 0
 }
 
+function pacapt_to_yay () {
+    echo "alias yay='sudo pacapt'" >> /etc/bash.bashrc
+    echo "alias yay='sudo pacapt'" >> /etc/skel/.bashrc
+    source /etc/bash.bashrc
+    return 0
+}
+
 build_deb
-gdebi -i $working_directly.deb
+blue_log "Installing pacapt"
+apt install $working_directly.deb
 rm -r $working_directly
 rm $working_directly.deb
 pacapt_to_yay
-# pacapt -V
-
-function error () {
-    red_log "Enter the correct mode number."
-    if [[ -z $argument ]]; then
-        $0
-    else
-        how_to_use
-    fi
-}
 
 cd $initial_directory
