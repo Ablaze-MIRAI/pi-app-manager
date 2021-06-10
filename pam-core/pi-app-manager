@@ -50,7 +50,7 @@ unset run
 #-- 設定 --#
 settings=${current_dir}/config
 entry_extension="entry"
-version=1.10-5
+version=1.10-6
 
 
 
@@ -130,6 +130,14 @@ function check_pkg () {
         printf "installed_apt"
     else
         printf "notinstalled"
+    fi
+}
+
+function check_snap () {
+    if [[ -n $(installed_snap_list | grep -x "$1") ]]; then
+	printf "installed_snap"
+    else
+	printf "notinstalled"
     fi
 }
 
