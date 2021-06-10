@@ -104,18 +104,7 @@ function build_deb () {
 }
 
 build_deb
-if [[ $(search_pkg gdebi) = 1 ]]; then
-    blue_log "Installing gdebi..."
-    apt-get --yes update > /dev/null
-    apt-get --yes install gdebi-core > /dev/null
-fi
-gdebi $working_directly.deb
-if [[ $(search_pkg gdebi) = 1 ]]; then
-    blue_log "Uninstalling gdebi..."
-    apt-get --yes purge gdebi-core > /dev/null
-    apt-get --yes --purge autoremove > /dev/null
-    apt-get --yes clean > /dev/null
-fi
+gdebi -i $working_directly.deb
 rm -r $working_directly
 rm $working_directly.deb
 pacapt_to_yay
