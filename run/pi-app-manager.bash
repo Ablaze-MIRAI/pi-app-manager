@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-apt install git -y
 piappmanager_version="$(curl -s https://raw.githubusercontent.com/NSK-1010/pi-app-manager/master/run/version.bash)"
-git clone https://github.com/nsk-1010/pi-app-manager.git -b ${piappmanager_version}
+curl -sL -o - https://github.com/nsk-1010/pi-app-manager.git/archive/${piappmanager_version}.tar.gz | tar zxfv -C pi-app-manager
 chmod 755 -R pi-app-manager
 cd pi-app-manager
 scriptdir=$(pwd)
