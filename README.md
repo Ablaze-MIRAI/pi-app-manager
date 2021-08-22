@@ -9,7 +9,7 @@
 curl -s https://raw.githubusercontent.com/NSK-1010/pi-app-manager/master/run/pi-app-manager.bash | bash
 ```
 ## ポータブル版
-こちらのコマンドを実行してください。Root以外のユーザーを使っている人は`|`のあとの`bash`を`sudo bash`に変更してください。
+こちらのコマンドを実行してください。Root以外のユーザーを使っている人は`sudo`で実行してください。
 ```sh
 curl -s https://raw.githubusercontent.com/NSK-1010/pi-app-manager/master/run/pi-app-manager-portable.bash | bash
 ```
